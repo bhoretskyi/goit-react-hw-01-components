@@ -19,7 +19,7 @@ const theme = {
     small: '4px',
     large: '8px'
 
-  }
+  } 
  
 };
 
