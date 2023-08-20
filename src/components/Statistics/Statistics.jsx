@@ -1,17 +1,18 @@
+import { StatisticsList, StatisticsListItem, StatisticsSection } from "./Statistics.styled";
 export default function ({ title = 'Upload stats', stats }) {
    
   return (
-    <section className="statistics">
+    <StatisticsSection>
       <h2 className="title">{title}</h2>
 
-      <ul className="stat-list">
+      <StatisticsList>
         {stats.map(obj => (
-          <li key={obj.id}>
+          <StatisticsListItem key={obj.id}>
             <span className="label">{obj.label}</span>
             <span className="percentage">{obj.percentage}</span>
-          </li>)
+          </StatisticsListItem>)
         )}
-      </ul>
-    </section>
+      </StatisticsList>
+    </StatisticsSection>
   );
 }
