@@ -1,5 +1,5 @@
 import { StatisticsList, StatisticsListItem, StatisticsSection } from "./Statistics.styled";
-export default function ({ title = 'Upload stats', stats }) {
+export default function Statistics({ title = 'Upload stats', stats }) {
    
   return (
     <StatisticsSection>
