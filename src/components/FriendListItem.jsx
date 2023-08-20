@@ -1,11 +1,9 @@
-import friends from 'friends'
-
-export default function FriendListItem (props) {
-    return (
-       friends.map(friend => ( <li key={friend.id}>
-        <span>{friend.isOnline}</span>
-        <img  src={friend.avatar} alt="User avatar" width="48" />
-        <p>{friend.name}</p>
-      </li>))
-     )
-} 
+export default function FriendListItem({ avatar, name, isOnline }) {
+  return (
+    <li>
+      <span>{isOnline}</span>
+      <img src={avatar} alt="User avatar" width="48" />
+      <p>{name}</p>
+    </li>
+  );
+}

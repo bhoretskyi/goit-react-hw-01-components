@@ -4,7 +4,9 @@ import user from 'user';
 import data from 'data';
 import PropTypes from 'prop-types';
 import FriendList from './FriendList';
-import TransactionHistory from './TransactionHistory'
+import friends from 'friends';
+import transactions from 'transactions';
+import TransactionHistory from './TransactionHistory';
 
 export const App = () => {
   return (
@@ -16,15 +18,13 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-      <Statistics
-       stats={data} 
-       />
-       <FriendList/>
-       <TransactionHistory/>
+      <Statistics stats={data} />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </div>
   );
 };
- 
+
 Profile.propTypes = {
   username: PropTypes.string,
   tag: PropTypes.string,
@@ -34,5 +34,12 @@ Profile.propTypes = {
 };
 
 Statistics.propTypes = {
-  stats: PropTypes.array
-}
+  stats: PropTypes.array,
+};
+
+FriendList.propTypes = {
+  friends: PropTypes.array,
+};
+TransactionHistory.propTypes = {
+  items: PropTypes.array,
+};
