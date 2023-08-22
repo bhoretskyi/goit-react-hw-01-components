@@ -12,6 +12,6 @@ export const FriendListItemStyled = styled.li`
 
 export const TextIsOnline = styled.span`
   background-color: ${p => 
-    p.children === 'online' ? 'green' : 'red'
+    p.$eventStats === "true" ? 'green' : 'red'
   };
 `;
